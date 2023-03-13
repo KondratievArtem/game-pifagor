@@ -1,0 +1,214 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sixing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input:-ms-clear {
+	display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+button {
+	cursor: pointer;
+}
+button:-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+/* ================================================================ */
+.activ {
+	color: rgb(255, 255, 0);
+	background-color: rgba(26, 5, 142, 0.8);
+	font-weight: 700;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex: 0 1 100%;
+}
+.menu {
+	margin-right: 10px;
+}
+.lvl-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+}
+
+.lvl-menu li {
+	font-size: 14px;
+	padding: 23px 5px;
+	text-transform: uppercase;
+	cursor: default;
+}
+.contant {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	max-width: 800px;
+	max-height: 600px;
+	display: flex;
+	flex: 0 1 100%;
+	overflow: hidden;
+}
+.background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.background img {
+	width: 100%;
+	height: 100%;
+}
+.content__body {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	display: flex;
+	flex: 0 1 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 3px solid #159;
+	flex-wrap: wrap;
+}
+
+.block {
+	position: relative;
+	width: 113.5px;
+	height: 84.8px;
+	z-index: 2;
+}
+
+.block-front {
+	background-color: rgb(206, 194, 194);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.block-front input {
+	max-width: 33px;
+	writing-mode: none;
+	font-size: 22px;
+	text-align: center;
+	padding: 0 5px;
+	max-height: 25px;
+	border-radius: 5px;
+}
+.block-front label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.none {
+	animation-name: anim;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: inherit;
+	animation-timing-function: linear;
+}
+
+@keyframes anim {
+	/* 0%{
+		transform: rotateY(180deg);
+		transform: scale(0);
+	} */
+	100% {
+		opacity: 0;
+		visibility: hidden;
+		transform: rotate(180deg);
+	}
+}
+
+.none-error {
+	border: 1px solid red;
+	color: red;
+}
+
+.none-error input {
+	color: red;
+}
